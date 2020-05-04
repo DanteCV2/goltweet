@@ -1,4 +1,4 @@
-module github.com/DanteCV2/goTweet
+module github.com/DanteCV2/goltweet
 
 go 1.14
 
