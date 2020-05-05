@@ -14,7 +14,7 @@ func CreateJWT(t models.User) (string, error) {
 		"email":      t.Email,
 		"name":       t.Name,
 		"surname":    t.Surname,
-		"birth_date": t.BithDate,
+		"birth_date": t.BirthDate,
 		"biography":  t.Biography,
 		"location":   t.Location,
 		"website":    t.Website,
