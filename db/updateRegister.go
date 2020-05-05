@@ -26,7 +26,7 @@ func UpdateRegister(u models.User, ID string) (bool, error) {
 		register["surname"] = u.Surname
 	}
 
-	register["surname"] = u.BirthDate
+	register["birthDate"] = u.BirthDate
 
 	if len(u.Avatar) > 0 {
 		register["avatar"] = u.Avatar

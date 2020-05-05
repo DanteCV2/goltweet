@@ -21,7 +21,7 @@ func UpdateProfile(w http.ResponseWriter, r *http.Request) {
 	var status bool
 	status, err = db.UpdateRegister(t, IDUsuario)
 	if err != nil {
-		http.Error(w, "Error updating info, please do it again"+err.Error(), 400)
+		http.Error(w, "Error updating info, please try again"+err.Error(), 400)
 		return
 	}
 
