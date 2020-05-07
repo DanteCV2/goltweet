@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/DanteCV2/goltweet/models"
@@ -37,7 +38,7 @@ func UpdateRegister(u models.User, ID string) (bool, error) {
 	}
 
 	if len(u.Biography) > 0 {
-		register["biography"] = u.Surname
+		register["biography"] = u.Biography
 	}
 
 	if len(u.Location) > 0 {
@@ -53,6 +54,8 @@ func UpdateRegister(u models.User, ID string) (bool, error) {
 	}
 
 	objID, _ := primitive.ObjectIDFromHex(ID)
+	fmt.Println(ID)
+	fmt.Println(objID)
 	filter := bson.M{"_id": bson.M{"$eq": objID}}
 
 	_, err := col.UpdateOne(ctx, filter, updtString)

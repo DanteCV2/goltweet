@@ -8,6 +8,6 @@ import (
 /*Claim process the jwt*/
 type Claim struct {
 	Email string             `json:"email"`
-	ID    primitive.ObjectID `bson:":id json: _id,imitempty"`
+	ID    primitive.ObjectID `bson:"_id" json:"_id,omitempty"`
 	jwt.StandardClaims
 }
