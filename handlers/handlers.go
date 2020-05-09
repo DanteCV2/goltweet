@@ -19,6 +19,7 @@ func Manage() {
 	router.HandleFunc("/viewprofile", middlew.CheckDB(middlew.ValidateJWT(routers.ViewProfile))).Methods("GET")
 	router.HandleFunc("/updateProfile", middlew.CheckDB(middlew.ValidateJWT(routers.UpdateProfile))).Methods("PUT")
 	router.HandleFunc("/tweet", middlew.CheckDB(middlew.ValidateJWT(routers.SaveTweet))).Methods("POST")
+	router.HandleFunc("/readTweets", middlew.CheckDB(middlew.ValidateJWT(routers.Readtweets))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 
