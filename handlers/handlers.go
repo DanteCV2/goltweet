@@ -29,6 +29,7 @@ func Manage() {
 
 	router.HandleFunc("/setRelation", middlew.CheckDB(middlew.ValidateJWT(routers.SetRelation))).Methods("POST")
 	router.HandleFunc("/deleteRelation", middlew.CheckDB(middlew.ValidateJWT(routers.DeleteRelation))).Methods("DELETE")
+	router.HandleFunc("/getRelation", middlew.CheckDB(middlew.ValidateJWT(routers.GetRelation))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 
