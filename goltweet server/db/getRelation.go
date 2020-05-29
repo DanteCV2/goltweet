@@ -18,7 +18,7 @@ func GetRalation(t models.Relation) (bool, error) {
 
 	condition := bson.M{
 		"userid":         t.UserID,
-		"Userrelationid": t.UserRelationID,
+		"userrelationid": t.UserRelationID,
 	}
 
 	var result models.Relation
